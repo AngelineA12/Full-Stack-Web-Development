@@ -1,0 +1,119 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("https://i.redd.it/uvo4ovp5oj661.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: #fff;
+
+}
+h1{
+    font-family: cursive;
+    position: fixed;
+    right: 120px;
+    top: 30px;
+    color: rgb(240, 240, 240);
+    font-size: 100px;
+}
+#container{
+    
+    overflow: hidden;
+    box-shadow: 10px 10px 10px 10px whitesmoke;
+    width: 500px;
+    max-width: 400px;
+    padding: 70px;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(to bottom,#444b4f,#010103);
+    border-radius: 50px;
+   
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    left: 200px;
+    border-radius: 123px;
+    box-shadow:  7px 7px 14px #fafafa,
+             -7px -7px 14px #ffffff;
+   font-family: 'Times New Roman', Times, serif;
+   color:rgba(8, 8, 89, 0.742);
+}
+#container:hover{
+    transform: scale(1.05);
+}
+label {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+input, button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+}
+
+input {
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    color:black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+button:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: #219653;
+    transform: scale(1.05);
+}
+
+#display {
+    font-size: 100px;
+    margin-top: 10px;
+    
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    
+}
+button {
+    background-color: #1c87c9;
+    -webkit-border-radius: 60px;
+    border-radius: 60px;
+    border: none;
+    color: #eeeeee;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 22px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-family:cursive;
+  }
+  @keyframes glowing {
+    0% {
+      background-color: #060c24;
+      box-shadow: 0 0 5px #0805a8;
+    }
+    50% {
+      background-color: #060c24;
+      box-shadow: 0 0 20px #0805a8;
+    }
+    100% {
+      background-color: #060c24;
+      box-shadow: 0 0 5px #0805a8;
+    }
+  }
+  button {
+    animation: glowing 1300ms infinite;
+  }

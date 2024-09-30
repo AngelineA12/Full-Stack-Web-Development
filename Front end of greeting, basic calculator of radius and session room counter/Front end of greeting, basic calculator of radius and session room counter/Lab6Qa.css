@@ -1,0 +1,81 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 70px;
+    padding: 20px;
+    box-shadow: 0 0 60px black (0, 0.9, 0, 0.8);
+    transition: transform 0.3s ease-in-out;
+    border-color: darkred;
+    
+  }
+
+  .container:hover {
+    transform: scale(1.05);
+  }
+  
+  h1 {
+    color:darkblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+  }
+  
+  .form-container {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color:blue;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 20px;
+  }
+  
+  input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 50px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color:blue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius: 50px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color:green;
+    transform: scale(1.05);
+  }
+  
+  .output-container {
+    font-size: 1.2em;
+    color:darkblue;
+    font-family: cursive;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .output-container:hover{
+    transform: scale(1.05);
+  }

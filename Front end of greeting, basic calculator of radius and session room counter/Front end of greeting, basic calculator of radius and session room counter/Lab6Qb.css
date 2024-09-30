@@ -1,0 +1,93 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("https://img.freepik.com/free-photo/background-gradient-lights_23-2149304986.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .container:hover {
+    transform: scale(1.05);
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+    color: linear-gradient(to right, #ff00ae, #d410df); /* Gradient color for heading */
+    text-shadow: 2px 2px 4px rgba(0.5, 0, 0, 0.6);
+    transition: color 0.3s; /* Smooth text color transition */
+    font-family: cursive;
+}
+
+  
+  .form-container {
+    margin-bottom: 20px;
+    transform: scale(1.05);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color:darkmagenta;
+    font-weight:bold;
+    font-size: 20px;
+  }
+  
+  input {
+    padding: 12px;
+    width: 250px;
+    border: 2px solid #f304bf;
+    border-radius: 35px;
+    margin-bottom: 15px;
+    color:blueviolet;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: transform 0.3s ease-in-out;
+  }
+  input:hover{
+    transform: scale(1.05);
+  }
+  button {
+    padding: 12px 20px;
+    background-color: #db07d0;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #ca00fc;
+    border-radius: 20px;
+    transform: scale(1.05);
+  }
+  
+  .output-container {
+    font-size: 1.4em;
+    color: #ff0099;
+    font-family:cursive;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .output-container:hover{
+    transform: scale(1.05);
+  }

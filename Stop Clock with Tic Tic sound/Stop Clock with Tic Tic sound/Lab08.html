@@ -1,0 +1,88 @@
+<html>
+<head>
+    <link rel="stylesheet" href="Lab8.css">
+    <!--<script language = "javascript" type = "text/javascript" src ="Lab8.js"></script>-->
+    <title>STOP CLOCK</title>
+</head>
+<body>
+  <h1>COUNTDOWN</h1>
+  <audio id = "tickingAudio" preload="auto"> 
+    <source src="clocktick.mp3" type="audio/mpeg"> 
+ </audio>
+<div id = "container">
+  <center>
+  <label for="duration">Enter Duration (minutes):</label>
+    <input type="number" id="duration" min="1" value="Enter the duration">
+
+<br> <div id="display">00:00</div><br>
+    <button id="start">Start</button>
+    <button id="pause">Pause</button>
+    <button id="resume">Resume</button>
+   
+    <button id="reset">Reset</button>
+    
+    <br>
+</div>
+    </center>
+    
+    
+    <script>
+        let timer;
+        let durationInput = document.getElementById('duration');
+        let startButton = document.getElementById('start');
+        let pauseButton = document.getElementById('pause');
+        let resumeButton = document.getElementById('resume');
+        let resetButton = document.getElementById('reset');
+        let display = document.getElementById('display');
+        let remainingTime;
+
+        startButton.addEventListener('click', startTimer);
+        pauseButton.addEventListener('click', pauseTimer);
+        resumeButton.addEventListener('click', resumeTimer);
+        resetButton.addEventListener('click', resetTimer);
+
+        function startTimer() {
+            if (!timer) {
+                remainingTime = durationInput.value * 60;
+                timer = setInterval(updateTimer, 1000);
+                tickingAudio.play(); 
+            }
+        }
+
+        function updateTimer() {
+            if (remainingTime > 0) {
+                let minutes = Math.floor(remainingTime / 60);
+                let seconds = remainingTime % 60;
+                display.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                remainingTime--;
+            } else {
+                clearInterval(timer);
+                timer = null;
+                tickingAudio.pause(); 
+
+            }
+        }
+
+        function pauseTimer() {
+            clearInterval(timer);
+            timer = null;
+            tickingAudio.pause();
+        }
+
+        function resumeTimer() {
+            if (!timer) {
+                timer = setInterval(updateTimer, 1000);
+                tickingAudio.play();
+            }
+        }
+
+        function resetTimer() {
+            clearInterval(timer);
+            timer = null;
+            display.textContent = '00:00';
+            tickingAudio.pause(); // Pause the ticking sound
+            tickingAudio.currentTime = 0; 
+        }
+    </script>
+  </body>
+  </html>
